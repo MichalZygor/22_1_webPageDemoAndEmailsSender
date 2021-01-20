@@ -1,4 +1,4 @@
-package pl.javastart.thymeleafdemo;
+package pl.javastart.webPageDemoAndEmailsSender;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

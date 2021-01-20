@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VAZZA - strona domowa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .text-color-mz1 {
+            color: darkgreen;
+        }
+
+        .bg-color-mz1 {
+            background-color: #F09415;
+            color: #76280B;
+        }
+
+        body {
+            background-color: red; /* For browsers that do not support gradients */
+            background-image: linear-gradient(to right, #DB701D , #B03308);
+        }
+
+        .mz-top-menu{
+            border: 0;
+            background-color:orange;
+            width: 144px;
+            height: 144px;
+            border-radius: 0;
+            box-shadow: 0px 0px 20px 10px #000000;
+
+        }
+
+        .effect1 {
+            border: 0;
+            background-color: #262626;
+            border-radius: 0;
+            box-shadow: 0px 0px 5px 1px #262626;
+            color: white;
+        }
+
+        .custom-container1 {
+
+
+            margin: 0;
+
+            border: 0;
+            background-color: #262626;
+            border-radius: 0;
+            box-shadow: 0px 10px 30px #262626;
+            color: white;
+
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="container-fluid" style="margin-top: 30px">
+
+
+
+    <div class="row">
+        <div class="col-sm custom-container1 d-flex"  >
+            <div style="margin: auto; width: 100%">
+            <div class="d-flex bd-highlight h4" >
+                <a class="p-2 flex-fill bd-highlight text-center nav-link text-white text-uppercase font-weight-bolder" href="#">STRONA GŁÓWNA</a>
+                <a class="p-2 flex-fill bd-highlight text-center nav-link text-white text-uppercase font-weight-bolder" href="#">DLACZEGO VAZZA</a>
+                <a class="p-2 flex-fill bd-highlight text-center nav-link text-white text-uppercase font-weight-bolder" href="#">WARTOŚCI</a>
+            </div>
+            </div>
+        </div>
+        <div class="col-sm-2 custom-container1 text-center" style="margin-right: 10px">
+            <a href="#"><img src="../static/src/logo2.png" style="height: 120px"></a>
+        </div>
+        <div class="col-sm-3 custom-container1 text-center align-middle d-flex bd-highlight h4" style="background-color:  #F09415;">
+            <div style="margin: auto">
+            <img src="../static/src/phone.png" style="height: 50px">
+            <span style="padding-left: 15px; white-space:nowrap">+48 322-352-533</span><br>
+            <img src="../static/src/email.png" style="height: 50px">
+            <a href="#" class=" text-white" style="padding-left: 15px">KONTAKT</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm p-5 text-white" style="line-height: 2em">
+            <img class="" src="../static/src/tree1.png" style="width: 126px; float: right; margin-left: 50px">
+            <h3 class="py-3 " style="color: black">Witamy w VAZZA Poland!</h3>
+            <h4>Czołowe i innowacyjne rozwiązania dla branży drzewnej.
+            VAZZA jest globalnym koncernem technologicznym, który dostarcza rozwiązania dla przemysłu drzewnego,
+            wspierając w ten sposób rozwój  nowej generacji. Technologia VAZZA umożliwia produktom widzenie,
+            myślenie i działanie („see. think. act”). W trzech obszarach technologicznych, takich jak sterowanie
+            ruchem prototypów, zintegrowane bezpieczeństwo, elektromobilność,
+            firma VAZZA oferuje kompleksowe rozwiązania dla producentów  oraz dostawców usług .
+            Firma VAZZA oferuje technologię elektromobilności dla różnych rodzajów maszynerii. Dzięki swoim produktom,
+            firma przyczynia się do redukcji emisji zanieczyszczeń i ochrony klimatu.
+            </h4>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-color-mz1 shadow-sm mt-5 mb-2 fs-6 text-center pt-2 pb-2 position-relative">
+    <div class="row">
+        <div class="col-sm-3" style="font-size: small; color: #FFD28A">Przeglądasz >> DLACZEGO VAZZA</div>
+        <div class="col-sm-6">Designed by Michał Zygor, 2021.01</div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
+</body>
+</html>

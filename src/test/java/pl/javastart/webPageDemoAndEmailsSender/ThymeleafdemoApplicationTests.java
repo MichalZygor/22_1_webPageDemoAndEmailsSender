@@ -1,4 +1,4 @@
-package pl.javastart.thymeleafdemo;
+package pl.javastart.webPageDemoAndEmailsSender;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
