@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout-general.html}" lang="pl" >
+<head>
+    <title th:text="${activePage}">page name</title>
+</head>
+<body>
+<section layout:fragment="content">
+    <h3 class="py-1 " style="color: black">Witamy w VAZZA Poland!</h3>
+    <h3 class="py-1 " style="color: black">Kim jesteśmy?</h3>
+    <h3 class="py-1" style="color: black">VAZZA Poland – TWORZYMY PRZYSZŁOŚĆ!</h3>
+    <h4>Lider na europejskim rynku inteligentnych klocków drewnianych. Jesteśmy częścią VAZZA Power Group. VAZZA Poland
+        to największy w Polsce producent klocków, kostrukcji drewnianych, co niesie za sobą ogromne możliwości.
+        Łączymy zaawansowaną wiedzę z dziedziny elektroniki z pasją i troską o środowisko. Chcesz współtworzyć z
+        nami innowacyjne produkty, które zmieniają nasz świat?
+        <br />
+        <br />
+        <table>
+            <tr>
+                <td><h5 style="color: black">Co nas napędza?</h5></td>
+                <td><h5 style="color: black">Co charakteryzuje naszych pracowników?</h5></td>
+            </tr>
+            <tr>
+                <td>
+                    <ul class="h5">
+                        <li>przyszłościowy produkt</li>
+                        <li>nowoczesne technologie</li>
+                        <li>globalny zasięg</li>
+                        <li>kilkudziesięcioprocentowy wzrost rok do roku</li>
+                        <li>świetni ludzie</li>
+                        <li>dynamiczne środowisko</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul class="h5">
+                        <li>wiedza</li>
+                        <li>umiejętności</li>
+                        <li>nastawienie na cel</li>
+                        <li>proaktywność</li>
+                        <li>współpraca</li>
+                        <li>otwartość na zmiany</li>
+                        <li>poczucie humoru</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </h4>
+</section>
+</body>
+</html>

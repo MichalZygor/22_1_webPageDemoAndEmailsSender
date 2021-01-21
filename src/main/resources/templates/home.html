@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout-general.html}" lang="pl" >
 <head>
-    <title>dddd</title>
+    <title th:text="${activePage}">page name</title>
 </head>
 <body>
 <section layout:fragment="content">
-<h1>strona główna</h1>
+    <h3 class="py-3 " style="color: black">Witamy w VAZZA Poland!</h3>
+    <h4>Czołowe i innowacyjne rozwiązania dla branży drzewnej.
+        VAZZA jest globalnym koncernem technologicznym, który dostarcza rozwiązania dla przemysłu drzewnego,
+        wspierając w ten sposób rozwój  nowej generacji. Technologia VAZZA umożliwia produktom widzenie,
+        myślenie i działanie („see. think. act”). W trzech obszarach technologicznych, takich jak sterowanie
+        ruchem prototypów, zintegrowane bezpieczeństwo, elektromobilność,
+        firma VAZZA oferuje kompleksowe rozwiązania dla producentów  oraz dostawców usług .
+        Firma VAZZA oferuje technologię elektromobilności dla różnych rodzajów maszynerii. Dzięki swoim produktom,
+        firma przyczynia się do redukcji emisji zanieczyszczeń i ochrony klimatu.
+    </h4>
 </section>
 </body>
 </html>

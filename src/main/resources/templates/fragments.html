@@ -80,14 +80,14 @@
             </div>
         </div>
         <div class="col-sm-2 custom-container1 text-center" style="margin-right: 10px">
-            <a href="#"><img src="../static/src/logo2.png" style="height: 120px" th:src="@{/src/logo2.png}"></a>
+            <a href="#" th:href="@{|/|}"><img src="../static/src/logo2.png" style="height: 120px" th:src="@{/src/logo2.png}"></a>
         </div>
         <div class="col-sm-3 custom-container1 text-center align-middle d-flex bd-highlight h4" style="background-color:  #F09415;">
             <div style="margin: auto">
                 <img src="../static/src/phone.png" style="height: 50px" th:src="@{/src/phone.png}">
                 <span style="padding-left: 15px; white-space:nowrap">+48 322-352-533</span><br>
-                <img src="../static/src/email.png" style="height: 50px" th:src="@{/src/email.png}">
-                <a href="#" class=" text-white" style="padding-left: 15px">KONTAKT</a>
+                <img src="../static/src/email.png" style="height: 50px" th:remove="all">
+                <a href="#" class=" text-white" style="padding-left: 15px" th:remove="all">KONTAKT</a>
             </div>
         </div>
     </div>
@@ -111,7 +111,7 @@
 
 <div class="container-fluid bg-color-mz1 shadow-sm mt-5 mb-2 fs-6 text-center pt-2 pb-2 position-relative"  th:fragment="footer">
     <div class="row">
-        <div class="col-sm-3" style="font-size: small; color: #FFD28A">Przeglądasz >> DLACZEGO VAZZA</div>
+        <div class="col-sm-3" style="font-size: small; color: #FFD28A" th:text="|Przeglądasz >> ${activePage} |">Przeglądasz >> DLACZEGO VAZZA</div>
         <div class="col-sm-6">Designed by Michał Zygor, 2021.01</div>
         <div class="col-sm-3"></div>
     </div>
