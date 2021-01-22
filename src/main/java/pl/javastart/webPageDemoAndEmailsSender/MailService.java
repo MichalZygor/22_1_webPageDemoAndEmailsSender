@@ -1,16 +1,12 @@
 package pl.javastart.webPageDemoAndEmailsSender;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 @Service
 public class MailService {
-    //private static final Logger logger = LoggerFactory.getLogger(MailService.class);
-    private JavaMailSender mailSender;
+    private final JavaMailSender mailSender;
 
     public MailService(JavaMailSender mailSender) {
         this.mailSender = mailSender;

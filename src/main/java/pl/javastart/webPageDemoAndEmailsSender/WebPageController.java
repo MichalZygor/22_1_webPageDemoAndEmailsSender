@@ -7,11 +7,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class WebPageController {
-    private WebpageRepository webpageRepository;
     private final MailService mailService;
 
-    public WebPageController(WebpageRepository webpageRepository, MailService mailService) {
-        this.webpageRepository = webpageRepository;
+    public WebPageController(MailService mailService) {
         this.mailService = mailService;
     }
 
@@ -50,16 +48,11 @@ public class WebPageController {
     }
 
     @PostMapping("/CONTACT")
-    public String pageContact(Model model, ContactPerson contactPerson) {
-
-        model.addAttribute("contactPerson", contactPerson);
-        model.addAttribute("pagesList", WebPageList.values());
-        model.addAttribute("activePage", WebPageList.CONTACT);
+    public String pageContact(ContactPerson contactPerson) {
         mailService.sendMail(contactPerson.getEmail(), "test_javascript@ovo.slask.pl"
                 , "Wiadomość ze strony od " + contactPerson.getName(), contactPerson.getMessage());
         mailService.sendMailConfirmationToGuest("test_javascript@ovo.slask.pl", contactPerson.getEmail()
                 , contactPerson.getName());
-        return "contact";
+        return "redirect:/CONTACT";
     }
-
 }
