@@ -1,0 +1,14 @@
+spring:
+  mail:
+    host: mail.ovo.slask.pl
+    username: test_javascript@ovo.slask.pl
+    password: DwaTysiace2000@
+    properties.mail:
+      transport.protocol: smtp
+      mail:
+        smtp:
+          port: 465
+          auth: true
+          starttls.enable: true
+          starttls.require: true
+

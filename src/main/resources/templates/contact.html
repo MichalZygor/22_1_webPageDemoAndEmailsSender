@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout-general.html}" lang="pl">
+<head>
+    <title th:text="${activePage.getDescription()}">page name</title>
+</head>
+<body>
+<section layout:fragment="content">
+    <h3 class="py-3 " style="color: black">Zostańmy w kontakcie!</h3>
+    <h4>Służymy pełnym doradztwem technicznym, zarówno na etapie tworzenia koncepcji technicznych jak i na etapie
+        wykonawstwa. Prosimy o uzupełnienie formularza:
+        <div class="row pt-3">
+            <div class="col-md" id="main">
+
+                <form th:object="${contactPerson}" th:action="@{|/${activePage}|}" class="needs-validation" novalidate
+                      method="post">
+                    <div class="form-row">
+                        <div class="col-md-5 mb-3">
+                            <label for="validationCustom01">Imię i nazwisko: </label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="" required
+                                   minlength="5" th:field="*{name}">
+                            <div class="invalid-feedback" style="color: darkred; font-size: small">
+                                Proszę wpisać dane!
+                            </div>
+                        </div>
+                        <div class="col-md-7 mb-3"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-5 mb-3">
+                            <label for="validationCustom012">Adres e-mail: </label>
+                            <input type="email" class="form-control" id="validationCustom012" placeholder="" required
+                                   minlength="3" th:field="*{email}">
+                            <div class="invalid-feedback" style="color: darkred; font-size: small">
+                                Proszę wpisać dane!
+                            </div>
+                        </div>
+                        <div class="col-md-7 mb-3"></div>
+                    </div>
+                    <div class="col-md-5 mb-3">
+                        <label for="validationCustom03">Treść wiadomości: </label>
+                        <textarea class="form-control" id="validationCustom03" placeholder="min 20 znaków" required
+                                  minlength="20"
+                                  th:field="*{message}"></textarea>
+                        <div class="invalid-feedback" style="color: darkred; font-size: small">
+                            Proszę wpisać dane!
+                        </div>
+                    </div>
+                    <div class="col-md-7 mb-3"></div>
+
+
+                    <button class="btn btn-secondary" type="reset">Wyczyść formularz!</button>
+                    <button class="btn btn-primary" type="submit">Wyslij!</button>
+
+                </form>
+
+            </div>
+        </div>
+    </h4>
+</section>
+
+<script layout:fragment="jsbottom">
+    (function () {
+        'use strict';
+        window.addEventListener('load', function () {
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+</body>
+</html>

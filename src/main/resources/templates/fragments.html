@@ -111,7 +111,7 @@
 
 <div class="container-fluid bg-color-mz1 shadow-sm mt-5 mb-2 fs-6 text-center pt-2 pb-2 position-relative"  th:fragment="footer">
     <div class="row">
-        <div class="col-sm-3" style="font-size: small; color: #FFD28A" th:text="|Przeglądasz >> ${activePage} |">Przeglądasz >> DLACZEGO VAZZA</div>
+        <div class="col-sm-3" style="font-size: small; color: #FFD28A" th:text="|Przeglądasz >> ${activePage.getDescription()} |">Przeglądasz >> DLACZEGO VAZZA</div>
         <div class="col-sm-6">Designed by Michał Zygor, 2021.01</div>
         <div class="col-sm-3"></div>
     </div>
