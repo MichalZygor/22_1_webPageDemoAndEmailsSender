@@ -20,26 +20,26 @@ public class WebPageController {
         return "home";
     }
 
-    @GetMapping("/HOME_PAGE")
+    @GetMapping("/home-page")
     public String pageHomeBis() {
         return "redirect:/";
     }
 
-    @GetMapping("/WHY_VAZZA")
+    @GetMapping("/why-vazza")
     public String pageWhy(Model model) {
         model.addAttribute("pagesList", WebPageList.values());
         model.addAttribute("activePage", WebPageList.WHY_VAZZA);
-        return "why_vazza";
+        return "why-vazza";
     }
 
-    @GetMapping("/VALUES")
+    @GetMapping("/values")
     public String pageValues(Model model) {
         model.addAttribute("pagesList", WebPageList.values());
         model.addAttribute("activePage", WebPageList.VALUES);
         return "values";
     }
 
-    @GetMapping("/CONTACT")
+    @GetMapping("/contact")
     public String pageContact(Model model) {
         model.addAttribute("contactPerson", new ContactPerson());
         model.addAttribute("pagesList", WebPageList.values());
@@ -47,12 +47,10 @@ public class WebPageController {
         return "contact";
     }
 
-    @PostMapping("/CONTACT")
+    @PostMapping("/contact")
     public String pageContact(ContactPerson contactPerson) {
-        mailService.sendMail(contactPerson.getEmail(), "test_javascript@ovo.slask.pl"
-                , "Wiadomość ze strony od " + contactPerson.getName(), contactPerson.getMessage());
-        mailService.sendMailConfirmationToGuest("test_javascript@ovo.slask.pl", contactPerson.getEmail()
-                , contactPerson.getName());
-        return "redirect:/CONTACT";
+        mailService.sendMail(contactPerson);
+        mailService.sendMailConfirmationToGuest(contactPerson);
+        return "redirect:/contact";
     }
 }

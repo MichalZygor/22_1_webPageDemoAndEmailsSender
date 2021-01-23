@@ -33,7 +33,6 @@
             height: 144px;
             border-radius: 0;
             box-shadow: 0px 0px 20px 10px #000000;
-
         }
 
         .effect1 {
@@ -45,33 +44,26 @@
         }
 
         .custom-container1 {
-
-
             margin: 0;
-
             border: 0;
             background-color: #262626;
             border-radius: 0;
             box-shadow: 0px 10px 30px #262626;
             color: white;
-
         }
-
     </style>
 </head>
 <body>
 
 
 <div class="container-fluid" style="margin-top: 30px">
-
-
-
     <div class="row" th:fragment="header">
         <div class="col-sm custom-container1 d-flex"  >
             <div style="margin: auto; width: 100%">
             <div class="d-flex bd-highlight h4" >
                 <a class="p-2 flex-fill bd-highlight text-center nav-link text-white text-uppercase font-weight-bolder"
-                   href="#" th:each="pageList : ${pagesList}" th:text="|${pageList.description}|" th:href="@{|/${pageList}|}">STRONA GŁÓWNA</a>
+                   href="#" th:each="pageList : ${pagesList}" th:text="|${pageList.description}|"
+                   th:href="@{|/${#strings.replace(#strings.toLowerCase(pageList), '_','-')}|}">STRONA GŁÓWNA</a>
                 <a class="p-2 flex-fill bd-highlight text-center nav-link text-white text-uppercase font-weight-bolder"
                    href="#" th:remove="all" >DLACZEGO VAZZA</a>
                 <a class="p-2 flex-fill bd-highlight text-center nav-link text-white text-uppercase font-weight-bolder"
@@ -91,7 +83,6 @@
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class="col-sm p-5 text-white" style="line-height: 2em">
             <img class="" src="../static/src/tree1.png" style="width: 126px; float: right; margin-left: 50px">
@@ -108,7 +99,6 @@
         </div>
     </div>
 </div>
-
 <div class="container-fluid bg-color-mz1 shadow-sm mt-5 mb-2 fs-6 text-center pt-2 pb-2 position-relative"  th:fragment="footer">
     <div class="row">
         <div class="col-sm-3" style="font-size: small; color: #FFD28A" th:text="|Przeglądasz >> ${activePage.getDescription()} |">Przeglądasz >> DLACZEGO VAZZA</div>

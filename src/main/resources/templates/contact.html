@@ -12,7 +12,9 @@
         <div class="row pt-3">
             <div class="col-md" id="main">
 
-                <form th:object="${contactPerson}" th:action="@{|/${activePage}|}" class="needs-validation" novalidate
+                <form th:object="${contactPerson}"
+                      th:action="@{|/${#strings.replace(#strings.toLowerCase(activePage), '_','-')}|}"
+                      class="needs-validation" novalidate
                       method="post">
                     <div class="form-row">
                         <div class="col-md-5 mb-3">
